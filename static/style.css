@@ -1,0 +1,409 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle,#52002c,#050008);
+
+    font-family:Segoe UI, sans-serif;
+
+    color:white;
+
+}
+
+
+/* YILDIZLAR */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(white 2px,transparent 2px),
+    radial-gradient(#ff8fb3 1px,transparent 1px);
+
+
+    background-size:
+    80px 80px,
+    120px 120px;
+
+
+    animation:yildiz 20s linear infinite;
+
+}
+
+
+@keyframes yildiz{
+
+from{
+background-position:0 0;
+}
+
+to{
+background-position:500px 500px;
+}
+
+}
+
+
+
+/* ANA ALAN */
+
+.content{
+
+    position:relative;
+
+    z-index:5;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+/* BÜYÜK YAZILAR */
+
+
+#bigText{
+
+    font-size:80px;
+
+    max-width:90%;
+
+    color:white;
+
+
+    text-shadow:
+
+    0 0 20px #ff3377,
+    0 0 50px #ff0055;
+
+
+    animation:zoom 2s infinite;
+
+
+}
+
+
+
+@keyframes zoom{
+
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+
+}
+
+
+
+/* PASTA */
+
+
+#cake{
+
+    display:none;
+
+    margin-top:40px;
+
+    font-size:100px;
+
+
+    animation:showCake 2s;
+
+
+}
+
+
+
+#cake h2{
+
+    font-size:45px;
+
+    color:#ffd1df;
+
+    text-shadow:
+
+    0 0 20px pink;
+
+
+}
+
+
+
+#cake h3{
+
+    font-size:35px;
+
+    color:#ff7ca8;
+
+}
+
+
+
+@keyframes showCake{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(200px) scale(.5);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+
+}
+
+
+
+
+/* GÜL */
+
+.rose{
+
+    position:fixed;
+
+    top:-50px;
+
+    z-index:3;
+
+
+    animation:fall linear;
+
+
+}
+
+
+
+@keyframes fall{
+
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+}
+
+
+100%{
+
+transform:
+translateY(110vh)
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+/* ŞİFRE */
+
+#login{
+
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+
+background:
+
+linear-gradient(
+#250015,
+#000
+);
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+z-index:100;
+
+
+}
+
+
+
+.loginBox{
+
+
+background:
+
+rgba(255,255,255,.12);
+
+
+backdrop-filter:blur(15px);
+
+
+padding:50px;
+
+
+border-radius:30px;
+
+
+text-align:center;
+
+
+box-shadow:
+
+0 0 50px #ff3377;
+
+
+}
+
+
+
+.loginBox h1{
+
+font-size:40px;
+
+color:#ffb6c1;
+
+}
+
+
+
+.loginBox p{
+
+margin-top:15px;
+
+font-size:20px;
+
+}
+
+
+
+#pass{
+
+
+margin-top:25px;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+
+text-align:center;
+
+font-size:20px;
+
+
+}
+
+
+
+.loginBox button{
+
+
+margin-top:20px;
+
+
+padding:15px 45px;
+
+
+border:none;
+
+
+border-radius:40px;
+
+
+background:#ff3377;
+
+
+color:white;
+
+
+font-size:20px;
+
+
+cursor:pointer;
+
+
+box-shadow:0 0 20px pink;
+
+
+}
+
+
+#error{
+
+color:#ffaaaa;
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+#bigText{
+
+font-size:45px;
+
+}
+
+
+#cake h2{
+
+font-size:30px;
+
+}
+
+
+#cake h3{
+
+font-size:22px;
+
+}
+
+
+}
